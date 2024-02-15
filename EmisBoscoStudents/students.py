@@ -162,7 +162,7 @@ if initial_response.ok:
             modified_students_details.append(single_student_basic_modified_details)
             enrollments.append(enrolled_student)
         json_students_data = json.dumps(modified_students_details, indent=2)
-        json_enrollment_data = json.dumps(modified_students_details, indent=2)
+        json_enrollment_data = json.dumps(enrollments, indent=2)
 
         with open('students.json', 'w') as json_file:
             json_file.write(json_students_data)
